@@ -10,7 +10,7 @@ require './helpers/generator'
 get '/' do
   pitch = nil
   unless params[:idea].nil?
-    pitch = generate_pitch_for_idea(params[:idea])
+    pitch = generate_pitch_for_idea(escape_html(params[:idea]))
   end
   haml :index, :format => :html5, :locals => { :pitch => pitch }
 end
