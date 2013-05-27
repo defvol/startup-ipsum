@@ -1,0 +1,56 @@
+%header.jumbotron.subhead#overview
+  .row
+    .span12
+      %center
+        %h1
+          %font{color:"#FF0000"} Lorem
+          %blink
+            %font{color:"#4Bff00"}S
+            %font{color:"#00ffB4"}t
+            %font{color:"#00ffff"}a
+            %font{color:"#00B4ff"}r
+            %font{color:"#005Aff"}t
+            %font{color:"#0000ff"}u
+            %font{color:"#4B00ff"}p
+            %font{color:"#A500ff"}i
+            %font{color:"#FF00ff"}s
+            %font{color:"#FF00B4"}m
+        %p.lead Generating startup pitches since 2013
+  %br
+  %br
+  .row
+    .span12
+      %center
+        %form.form-search{action:"/", method:"get"}
+          %input.input-medium.search-query{type:"text", name:"idea"}
+          %button.btn{type:"submit"}Pitch me
+      %marquee Generating startup pitches since 2013
+  %br
+  .row
+    - unless idea.nil?
+      .span12.well
+        %b= idea
+        %br
+        %br
+  .row
+    .span12
+      %center
+        %p As seen in:
+        %img{:src => "img/test/yahooweek.gif"}
+        %img{:src => "img/test/community.gif"}
+        %img{:src => "img/test/wabwalk.gif"}
+        %img{:src => "img/test/webtrips.gif"}
+  %br
+  %center
+    %img{:src => "img/test/construction.gif"}
+  %br
+  %hr
+  %br
+  .row
+    .span6
+      %img{:src => "img/test/geocities.jpg"}
+    .span6{style:"text-align:right"}
+      %a{href:"mailto:rod@wilhel.me"}
+        %img{:src => "img/test/emailme.gif"}
+      %img{:src => "img/test/counter2.gif"}
+

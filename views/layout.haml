@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title Lorem startupism
+    %link{href:"bootstrap.min.css", rel:"stylesheet"}
+  %body{style: "background: url('img/test/microfab.gif')"}
+    = haml :navigation
+    .container{style: "padding-top: 100px"}
+      = yield
+
