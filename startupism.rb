@@ -4,8 +4,14 @@
 # http://divshot.github.io/geo-bootstrap/
 
 require 'sinatra'
+require 'active_support/inflector'
+require './helpers/generator'
 
 get '/' do
-  haml :index, :format => :html5, :locals => { :idea => params[:idea] }
+  pitch = nil
+  unless params[:idea].nil?
+    pitch = generate_pitch_for_idea(params[:idea])
+  end
+  haml :index, :format => :html5, :locals => { :pitch => pitch }
 end
 

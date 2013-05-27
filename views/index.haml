@@ -22,14 +22,14 @@
     .span12
       %center
         %form.form-search{action:"/", method:"get"}
-          %input.input-medium.search-query{type:"text", name:"idea"}
+          %input.input-medium.search-query{type:"text", name:"idea", placeholder:"e.g. taco"}
           %button.btn{type:"submit"}Pitch me
       %marquee Generating startup pitches since 2013
   %br
   .row
-    - unless idea.nil?
+    - unless pitch.nil?
       .span12.well
-        %b= idea
+        %b= pitch
         %br
         %br
   .row
